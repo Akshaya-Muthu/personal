@@ -1,12 +1,13 @@
-# React + Vite
+Akshaya M - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+About Me I'm Akshaya M, a FullStack Developer with a passion for building innovative solutions. This portfolio showcases my skills, and experiences.
 
-Currently, two official plugins are available:
+Skills =>Programming languages: JavaScript, Java, Python. =>Technologies: HTML5, CSS3, React, Node.js, ExpressJS =>Tools: Git, GitHub, Visual Studio Code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Experience =>FrontEnd Developer Intern at Mediwave Digital Pvt.Ltd. - In this intern,I learnt to create dynamic web applications and interactive user interface.These professionals work closely with back-end developers ,UI/UX designers to develop responsive and scalable solutions.using frameworks like react,vue,angular.js they form design wireframes and mockups with functional,high-quality websites. =>Software Development Intern at BlueStock Fintech Pvt.Ltd. - In this intern as a software developer I experienced researching, designing, building, and managing computer and application softwares, apply scientific and technological principles to user needs, write code, and ensure software functionality also experineced different coding languages, developed problem-solving and critical-thinking skills, and understood the software development process.
 
-## Expanding the ESLint configuration
+Education B.Tech in Computer and Communication Engineering at SMVEC( 2020-2024 ) with 8.81 CGPA.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Contact Me Feel free to reach out to me:
+
+->Email: akshayammuthu@gmail.com ->LinkedIn: https://www.linkedin.com/akshayamuthu
