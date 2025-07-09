@@ -1,74 +1,57 @@
 import React from "react";
-import HeroImg from "@/assets/images/hero.jpg";
-import OlovaLogo from "@/assets/images/olova.png";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-32 text-white bg-[#04081A]">
-      <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-        <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
-          Developer, Designer, Creator, Innovator
-        </h2>
+    <section
+      id="about"
+      className="relative bg-black text-white py-20"
+      style={{
+        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-bj62LCEWqVRz-PUBo0UWxXHmYL1eNbgZxQ&s')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
-        <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
-          {/* Image */}
-          <div className="relative mb-6 sm:mb-0">
-            <div className="aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent bg-gradient-to-b">
-              <img
-                src={HeroImg}
-                alt="Hero"
-                className="rounded-[15px] shadow block w-full h-auto"
-                width={1207}
-                height={929}
-              />
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col gap-12">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-bold text-center"
+        >
+          I'm Akshaya — Developer. Designer. Creator.
+        </motion.h2>
 
-          {/* Text */}
-          <div className="relative space-y-4">
-            <p>
-              Hello! I'm Akshaya, a passionate Full Stack Developer specializing
-              in building innovative web solutions and user-friendly interfaces.{" "}
-              <span className="font-bold text-white">
-                As the creator of the OlovaJS UI Framework,
-              </span>{" "}
-              I'm dedicated to simplifying development workflows.
-            </p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="space-y-6 text-lg leading-relaxed text-gray-200"
+        >
+          <p>
+            I’m a passionate{" "}
+            <span className="text-blue-400 font-semibold">Full Stack Developer</span>
+            creating seamless, high-performance web applications using modern
+            technologies like React, Node.js, MongoDB, and TailwindCSS.
+          </p>
 
-            <p>
-              I focus on making web development faster, easier, and more
-              accessible. Currently, I'm expanding into backend development to
-              grow as a full-stack engineer and build seamless, robust
-              applications.
-            </p>
+          <p>
+            My focus lies in building scalable, accessible, and aesthetic user
+            interfaces that bring ideas to life and solve real-world problems
+            through technology.
+          </p>
 
-            <div className="pt-6">
-              <blockquote className="border-l-4 border-gray-300 pl-4">
-                <p>
-                  I'm a lifelong learner and innovator, driven by a desire to
-                  contribute to the developer community with real tools and
-                  ideas. As the creator of OlovaJS, I'm pushing the boundaries
-                  of JavaScript frameworks to empower developers worldwide.
-                </p>
-
-                <div className="mt-6 space-y-3">
-                  <cite className="block font-medium text-white">
-                    Akshaya, Creator of
-                  </cite>
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={OlovaLogo}
-                      alt="Olova Logo"
-                      className="h-5 w-auto"
-                      height={20}
-                    />
-                    <span className="text-white">Freelance Hub</span>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-          </div>
-        </div>
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300">
+            "Coding is my canvas, creativity is my code — and every product is a
+            work of passion."
+            <cite className="block mt-2 not-italic text-white font-medium">— Akshaya</cite>
+          </blockquote>
+        </motion.div>
       </div>
     </section>
   );
