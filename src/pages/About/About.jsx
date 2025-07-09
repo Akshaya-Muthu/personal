@@ -1,56 +1,60 @@
 import React from "react";
+import HeroImg from "@/assets/images/hero.jpg";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative bg-black text-white py-20"
-      style={{
-        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-bj62LCEWqVRz-PUBo0UWxXHmYL1eNbgZxQ&s')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="relative py-20 px-6 text-white overflow-hidden"
+      style={{ backgroundColor: "#050812" }} // Much darker navy
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      {/* Abstract floating shapes (bubbles-like) */}
+      <div className="absolute top-10 left-10 w-60 h-60 bg-purple-600 opacity-20 rounded-full blur-3xl animate-float-slow z-0"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-blue-500 opacity-20 rounded-full blur-2xl animate-float-fast z-0"></div>
+      <div className="absolute top-1/3 right-1/4 w-52 h-52 bg-indigo-500 opacity-10 rounded-full blur-3xl animate-float-mid z-0"></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col gap-12">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-center"
-        >
-          I'm Akshaya — Developer. Designer. Creator.
-        </motion.h2>
-
+      {/* Main content */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12 relative z-10">
+        {/* Left Text */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="space-y-6 text-lg leading-relaxed text-gray-200"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-6 text-lg leading-relaxed text-gray-300"
         >
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            I'm Akshaya — Developer. Designer. Innovator.
+          </h2>
+
           <p>
             I’m a passionate{" "}
             <span className="text-blue-400 font-semibold">Full Stack Developer</span>
-            creating seamless, high-performance web applications using modern
-            technologies like React, Node.js, MongoDB, and TailwindCSS.
+            crafting beautiful, scalable applications that make a difference.
           </p>
 
           <p>
-            My focus lies in building scalable, accessible, and aesthetic user
-            interfaces that bring ideas to life and solve real-world problems
-            through technology.
+            My goal is to bring clarity and performance together, turning ideas
+            into functional digital experiences through frontend and backend expertise.
           </p>
 
-          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-300">
-            "Coding is my canvas, creativity is my code — and every product is a
-            work of passion."
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-400">
+            "Building meaningful software with creativity, clean code, and consistency."
             <cite className="block mt-2 not-italic text-white font-medium">— Akshaya</cite>
           </blockquote>
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <img
+            src={HeroImg}
+            alt="Akshaya working"
+            className="rounded-xl shadow-xl w-full h-auto"
+          />
         </motion.div>
       </div>
     </section>
